@@ -20,7 +20,7 @@ var express = require('express');
 var http = require('http');
 var app = express();
 var nconf = require('nconf');
-nconf.file({ file: './config.json' });
+nconf.file({ file: '/home/pi/stnp/config.json' });
 var logger = function(str) {
   mod = 'stnp';
   console.log("[%s] [%s] %s", new Date().toISOString(), mod, str);
@@ -79,7 +79,7 @@ var server = app.listen(nconf.get('port') || 8080, function () {
  * Load all plugins
  */
 var fs = require('fs');
-fs.readdir('./plugins', function(err, files) {
+fs.readdir('/home/pi/stnp/plugins', function(err, files) {
   if (!err) {
     files
     .filter(function(file) { return file.substr(-3) === '.js'; })
