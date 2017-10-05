@@ -1,4 +1,4 @@
 # stnp
 smartthings-nodeproxy
 
-Check stnp/instructions for info
+Check stnp/Instructions for info
