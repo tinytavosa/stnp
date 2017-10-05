@@ -1,0 +1,9 @@
+{
+  "port": 8080,
+  "authCode": "secret-key",
+  "dashX": {
+    "buttons": [
+      "yo:ur:MA:C#:he:re"
+    ]
+  }
+}
