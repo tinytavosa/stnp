@@ -1,0 +1,76 @@
+		Enable SSH:
+
+add file named "ssh" (no quotes) without an extension to /boot
+
+
+		Install bluetooth via terminal:
+
+sudo bluetoothctl
+
+agent on
+
+default-agent
+
+scan on
+
+pair aa:bb:cc:dd:ee:f1
+
+connect aa:bb:cc:dd:ee:f1
+
+
+		Install bluetooth via GUI
+
+sudo apt-get install bluetooth bluez blueman
+
+sudo reboot
+
+Menu > Preferences > Bluetooth Manager
+
+
+		Install SmartThings NodeProxy
+
+	sudo apt-get upgrade
+sudo apt-get update 
+
+wget https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-armv6l.tar.xz
+
+tar -xvf node-v6.11.4-linux-armv6l.tar.xz
+
+cd /home/pi/node-v6.11.4-linux-armv6l
+
+sudo cp -R * /usr/local/
+
+node -v
+
+	(returns v6.11.4)
+
+sudo reboot
+
+wget https://codeload.github.com/tinytavosa/stnp/zip/master -P /home/pi
+
+unzip master -d /home/pi
+
+sudo mv /home/pi/stnp-master /home/pi/stnp
+
+sudo rm master & sudo rm node-v6.11.4-linux-armv6l.tar.xz
+
+cd /home/pi/stnp
+
+sudo apt-get install libpcap-dev
+
+sudo npm install
+
+sudo npm run install:dash
+
+sudo node server.js
+ 
+	(get MAC address)
+
+	(push control+C to end server)
+	
+sudo nano config.json
+
+	(add MAC to field "yo:ur:MA:C#:he:re")
+	(add more fields undernearth "yo:ur:MA:C#:he:re")
+	(be sure to use a , after each "yo:ur:MA:C#:he:re" but not after)
+	(the last one)
